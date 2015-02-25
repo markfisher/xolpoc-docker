@@ -20,6 +20,10 @@ if [ -z "$XD_POC_MODULE" ]; then
 	exit 1
 fi
 
+if [ ! -d "artifacts" ]; then
+	mkdir artifacts
+fi
+
 cp -r $XD_HOME/modules artifacts
 cp $XD_POC_MODULE/build/libs/*.jar artifacts
 cp $XD_POC_ADMIN/build/libs/*.jar artifacts
