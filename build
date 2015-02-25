@@ -16,7 +16,7 @@ if [ -z "$XD_POC_ADMIN" ]; then
 fi
 
 if [ -z "$XD_POC_MODULE" ]; then
-	echo "XD_MODULE must be set"
+	echo "XD_POC_MODULE must be set"
 	exit 1
 fi
 
