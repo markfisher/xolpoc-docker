@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ ! -f "Dockerfile" ]; then
+	echo "Dockerfile not found"
+	exit 1
+fi
+
+if [ -z "$XD_HOME" ]; then
+	echo "XD_HOME must be set"
+	exit 1
+fi
+
+if [ -z "$XD_POC_ADMIN" ]; then
+	echo "XD_POC_ADMIN must be set"
+	exit 1
+fi
+
+if [ -z "$XD_POC_MODULE" ]; then
+	echo "XD_MODULE must be set"
+	exit 1
+fi
+
+cp -r $XD_HOME/modules artifacts
+cp $XD_POC_MODULE/build/libs/*.jar artifacts
+cp $XD_POC_ADMIN/build/libs/*.jar artifacts
+
+docker build -t pperalta/xd-poc .
+
