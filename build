@@ -25,8 +25,8 @@ if [ ! -d "artifacts" ]; then
 fi
 
 cp -r $XD_HOME/modules artifacts
-cp $XD_POC_MODULE/build/libs/*.jar artifacts
-cp $XD_POC_ADMIN/build/libs/*.jar artifacts
+cp $XD_POC_MODULE/build/libs/xolpoc-0.0.1-SNAPSHOT.jar artifacts
+cp $XD_POC_ADMIN/build/libs/xolpoc-admin-0.0.1-SNAPSHOT.jar artifacts
 
 docker build -t springxd/xol-poc .
 
