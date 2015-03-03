@@ -7,6 +7,5 @@ MAINTAINER Pivotal Software
 
 RUN mkdir -p /opt/xd/lib
 RUN mkdir -p /opt/xd/modules
-#ADD artifacts/xolpoc-0.0.1-SNAPSHOT.jar /opt/xd/lib/
 ADD artifacts/*.jar /opt/xd/lib/
 ADD artifacts/modules /opt/xd/modules

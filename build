@@ -28,5 +28,5 @@ cp -r $XD_HOME/modules artifacts
 cp $XD_POC_MODULE/build/libs/*.jar artifacts
 cp $XD_POC_ADMIN/build/libs/*.jar artifacts
 
-docker build -t pperalta/xd-poc .
+docker build -t springxd/xol-poc .
 
